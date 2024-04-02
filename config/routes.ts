@@ -16,6 +16,7 @@ export default [
     icon: 'LineChartOutlined',
     component: './AddChart',
   },
+  { path: '/my_chart', name: '我的图表', icon: 'pieChart', component: './MyChart' },
   {
     path: '/admin',
     name: '管理页',
