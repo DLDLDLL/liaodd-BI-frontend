@@ -16,6 +16,12 @@ export default [
     icon: 'LineChartOutlined',
     component: './AddChart',
   },
+  {
+    name: '智能分析(异步)',
+    path: '/add_chart_async',
+    icon: 'barChart',
+    component: './AddChartAsync',
+  },
   { path: '/my_chart', name: '我的图表', icon: 'pieChart', component: './MyChart' },
   {
     path: '/admin',
