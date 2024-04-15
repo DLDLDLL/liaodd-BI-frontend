@@ -1,4 +1,17 @@
 declare namespace API {
+  type AiFrequencyVO = {
+    id?: number;
+    remainFrequency?: number;
+    totalFrequency?: number;
+    userId?: number;
+  };
+
+  type BaseResponseAiFrequencyVO_ = {
+    code?: number;
+    data?: AiFrequencyVO;
+    message?: string;
+  };
+
   type BaseResponseBiResponse_ = {
     code?: number;
     data?: BiResponse;
@@ -20,6 +33,12 @@ declare namespace API {
   type BaseResponseInt_ = {
     code?: number;
     data?: number;
+    message?: string;
+  };
+
+  type BaseResponseListChart_ = {
+    code?: number;
+    data?: Chart[];
     message?: string;
   };
 
@@ -165,6 +184,11 @@ declare namespace API {
     chartType?: string;
     goal?: string;
     name?: string;
+  };
+
+  type getChartByIdCacheUsingGETParams = {
+    /** id */
+    id?: number;
   };
 
   type getChartByIdUsingGETParams = {

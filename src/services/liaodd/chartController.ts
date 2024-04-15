@@ -185,6 +185,29 @@ export async function getChartByIdUsingGet(
   });
 }
 
+/** getChartByIdCache GET /api/chart/get/cache */
+export async function getChartByIdCacheUsingGet(
+  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+  params: API.getChartByIdCacheUsingGETParams,
+  options?: { [key: string]: any },
+) {
+  return request<API.BaseResponseChart_>('/api/chart/get/cache', {
+    method: 'GET',
+    params: {
+      ...params,
+    },
+    ...(options || {}),
+  });
+}
+
+/** listChartByCache POST /api/chart/list/cache */
+export async function listChartByCacheUsingPost(options?: { [key: string]: any }) {
+  return request<API.BaseResponseListChart_>('/api/chart/list/cache', {
+    method: 'POST',
+    ...(options || {}),
+  });
+}
+
 /** listChartByPage POST /api/chart/list/page */
 export async function listChartByPageUsingPost(
   body: API.ChartQueryRequest,

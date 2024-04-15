@@ -5,6 +5,12 @@ export default [
     layout: false,
     routes: [{ path: '/user/login', component: './User/Login' }],
   },
+  {
+    name: '注册',
+    path: '/user',
+    layout: false,
+    routes: [{ path: '/user/register', component: './User/Register' }],
+  },
   // { path: '/welcome', name: '欢迎', icon: 'smile', component: './Welcome' },
   {
     path: '/',
