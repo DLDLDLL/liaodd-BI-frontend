@@ -10,21 +10,21 @@ const Footer: React.FC = () => {
       }}
       links={[
         {
-          key: 'Liaodd BI',
-          title: 'Liaodd BI',
-          href: 'https://pro.ant.design',
+          key: 'Liaoddbi backend',
+          title: 'Liaoddbi backend',
+          href: 'https://github.com/DLDLDLL/liaodd-BI-backend.git',
           blankTarget: true,
         },
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/ant-design/ant-design-pro',
+          href: 'https://github.com',
           blankTarget: true,
         },
         {
-          key: 'Liaodd BI',
-          title: 'Liaodd BI',
-          href: 'https://ant.design',
+          key: 'Liaoddbi front',
+          title: 'Liaoddbi front',
+          href: 'https://github.com/DLDLDLL/liaodd-BI-frontend.git',
           blankTarget: true,
         },
       ]}

@@ -201,9 +201,16 @@ export async function getChartByIdCacheUsingGet(
 }
 
 /** listChartByCache POST /api/chart/list/cache */
-export async function listChartByCacheUsingPost(options?: { [key: string]: any }) {
-  return request<API.BaseResponseListChart_>('/api/chart/list/cache', {
+export async function listChartByCacheUsingPost(
+  body: API.ChartQueryRequest,
+  options?: { [key: string]: any },
+) {
+  return request<API.BaseResponsePageChart_>('/api/chart/list/cache', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
     ...(options || {}),
   });
 }

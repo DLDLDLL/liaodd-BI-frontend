@@ -7,6 +7,7 @@ import type { MenuInfo } from 'rc-menu/lib/interface';
 import React, { useCallback } from 'react';
 import { flushSync } from 'react-dom';
 import HeaderDropdown from '../HeaderDropdown';
+import WebSocketComponent from '../WebSocket';
 
 export type GlobalHeaderRightProps = {
   menu?: boolean;
@@ -123,14 +124,26 @@ export const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu, childre
   ];
 
   return (
-    <HeaderDropdown
-      menu={{
-        selectedKeys: [],
-        onClick: onMenuClick,
-        items: menuItems,
-      }}
-    >
-      {children}
-    </HeaderDropdown>
+    // <HeaderDropdown
+    //   menu={{
+    //     selectedKeys: [],
+    //     onClick: onMenuClick,
+    //     items: menuItems,
+    //   }}
+    // >
+    //   {children}
+    // </HeaderDropdown>
+    <>
+      <WebSocketComponent userId={currentUser.id} />
+      <HeaderDropdown
+        menu={{
+          selectedKeys: [],
+          onClick: onMenuClick,
+          items: menuItems,
+        }}
+      >
+        {children}
+      </HeaderDropdown>
+    </>
   );
 };

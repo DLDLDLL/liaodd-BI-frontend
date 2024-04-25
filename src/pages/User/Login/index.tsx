@@ -54,7 +54,7 @@ const Login: React.FC = () => {
       flushSync(() => {
         setInitialState((s) => ({
           ...s,
-          currentUser: userInfo,
+          currentUser: userInfo.data,
         }));
       });
     }
