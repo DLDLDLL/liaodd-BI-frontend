@@ -71,6 +71,35 @@ declare namespace API {
     userId?: number;
   };
 
+  type AlipayInfo = {
+    alipayAccountNo?: number;
+    alipayId?: string;
+    createTime?: string;
+    id?: number;
+    isDelete?: number;
+    orderId?: number;
+    payStatus?: number;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
+  type AlipayInfoQueryRequest = {
+    alipayAccountNo?: number;
+    alipayId?: string;
+    createTime?: string;
+    current?: number;
+    id?: number;
+    orderId?: number;
+    pageSize?: number;
+    payStatus?: number;
+    sortField?: string;
+    sortOrder?: string;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
   type BaseResponseAiFrequencyVO_ = {
     code?: number;
     data?: AiFrequencyVO;
@@ -101,6 +130,12 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponseListPayInfoVO_ = {
+    code?: number;
+    data?: PayInfoVO[];
+    message?: string;
+  };
+
   type BaseResponseLoginUserVO_ = {
     code?: number;
     data?: LoginUserVO;
@@ -116,6 +151,12 @@ declare namespace API {
   type BaseResponsePageAiFrequencyOrder_ = {
     code?: number;
     data?: PageAiFrequencyOrder_;
+    message?: string;
+  };
+
+  type BaseResponsePageAlipayInfo_ = {
+    code?: number;
+    data?: PageAlipayInfo_;
     message?: string;
   };
 
@@ -281,6 +322,19 @@ declare namespace API {
     total?: number;
   };
 
+  type PageAlipayInfo_ = {
+    countId?: string;
+    current?: number;
+    maxLimit?: number;
+    optimizeCountSql?: boolean;
+    orders?: OrderItem[];
+    pages?: number;
+    records?: AlipayInfo[];
+    searchCount?: boolean;
+    size?: number;
+    total?: number;
+  };
+
   type PageChart_ = {
     countId?: string;
     current?: number;
@@ -318,6 +372,18 @@ declare namespace API {
     searchCount?: boolean;
     size?: number;
     total?: number;
+  };
+
+  type PayInfoVO = {
+    alipayAccountNo?: number;
+    alipayId?: string;
+    createTime?: string;
+    id?: number;
+    orderId?: number;
+    payStatus?: number;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
   };
 
   type User = {

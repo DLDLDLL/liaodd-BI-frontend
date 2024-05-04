@@ -35,10 +35,15 @@ export default [
     component: './AddChartAsyncMq',
   },
   {
-    name: '个人订单',
-    path: '/person/order',
+    name: "个人中心",
+    path: '/person',
     icon: 'DotChartOutlined',
-    component: './User/UserOrder'
+    routes: [
+      // { path: '/person/user_info', name: '个人信息', component: './User/UserInfo' },
+      { path: '/person/order', name: '个人订单', component: './User/UserOrder' },
+      // { path: '/person/pay_order',  name: '订单付款',component: './User/UserPayOrder' },
+      { path: '/person/payInfo', name: '支付信息查询', component: './User/UserPayInfo' },
+    ],
   },
   { path: '/my_chart', name: '我的图表', icon: 'pieChart', component: './MyChart' },
   {
