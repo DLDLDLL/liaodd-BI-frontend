@@ -1,4 +1,69 @@
 declare namespace API {
+  type addOrderUsingPOSTParams = {
+    /** total */
+    total?: number;
+  };
+
+  type AiFrequencyOrder = {
+    createTime?: string;
+    id?: number;
+    isDelete?: number;
+    orderStatus?: number;
+    price?: number;
+    purchaseQuantity?: number;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
+  type AiFrequencyOrderCancelRequest = {
+    createTime?: string;
+    id?: number;
+    orderStatus?: number;
+    price?: number;
+    purchaseQuantity?: number;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
+  type AiFrequencyOrderQueryRequest = {
+    createTime?: string;
+    current?: number;
+    id?: number;
+    orderStatus?: number;
+    pageSize?: number;
+    price?: number;
+    purchaseQuantity?: number;
+    sortField?: string;
+    sortOrder?: string;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
+  type AiFrequencyOrderUpdateRequest = {
+    createTime?: string;
+    id?: number;
+    orderStatus?: number;
+    price?: number;
+    purchaseQuantity?: number;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
+  type AiFrequencyOrderVO = {
+    createTime?: string;
+    id?: number;
+    orderStatus?: number;
+    price?: number;
+    purchaseQuantity?: number;
+    totalAmount?: number;
+    updateTime?: string;
+    userId?: number;
+  };
+
   type AiFrequencyVO = {
     id?: number;
     remainFrequency?: number;
@@ -30,6 +95,12 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponseListAiFrequencyOrderVO_ = {
+    code?: number;
+    data?: AiFrequencyOrderVO[];
+    message?: string;
+  };
+
   type BaseResponseLoginUserVO_ = {
     code?: number;
     data?: LoginUserVO;
@@ -39,6 +110,12 @@ declare namespace API {
   type BaseResponseLong_ = {
     code?: number;
     data?: number;
+    message?: string;
+  };
+
+  type BaseResponsePageAiFrequencyOrder_ = {
+    code?: number;
+    data?: PageAiFrequencyOrder_;
     message?: string;
   };
 
@@ -189,6 +266,19 @@ declare namespace API {
   type OrderItem = {
     asc?: boolean;
     column?: string;
+  };
+
+  type PageAiFrequencyOrder_ = {
+    countId?: string;
+    current?: number;
+    maxLimit?: number;
+    optimizeCountSql?: boolean;
+    orders?: OrderItem[];
+    pages?: number;
+    records?: AiFrequencyOrder[];
+    searchCount?: boolean;
+    size?: number;
+    total?: number;
   };
 
   type PageChart_ = {

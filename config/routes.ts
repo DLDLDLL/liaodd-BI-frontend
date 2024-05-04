@@ -34,6 +34,12 @@ export default [
     icon: 'DotChartOutlined',
     component: './AddChartAsyncMq',
   },
+  {
+    name: '个人订单',
+    path: '/person/order',
+    icon: 'DotChartOutlined',
+    component: './User/UserOrder'
+  },
   { path: '/my_chart', name: '我的图表', icon: 'pieChart', component: './MyChart' },
   {
     path: '/admin',
