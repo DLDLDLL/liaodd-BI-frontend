@@ -100,9 +100,25 @@ declare namespace API {
     userId?: number;
   };
 
+  type AlipayInfoVO = {
+    alipayAccountNo?: string;
+    alipayId?: string;
+    orderId?: number;
+    payStatus?: number;
+    qrCode?: string;
+    totalAmount?: number;
+    userId?: number;
+  };
+
   type BaseResponseAiFrequencyVO_ = {
     code?: number;
     data?: AiFrequencyVO;
+    message?: string;
+  };
+
+  type BaseResponseAlipayInfoVO_ = {
+    code?: number;
+    data?: AlipayInfoVO;
     message?: string;
   };
 
@@ -374,6 +390,11 @@ declare namespace API {
     total?: number;
   };
 
+  type payCodeUsingPOSTParams = {
+    /** orderId */
+    orderId?: number;
+  };
+
   type PayInfoVO = {
     alipayAccountNo?: number;
     alipayId?: string;
@@ -384,6 +405,21 @@ declare namespace API {
     totalAmount?: number;
     updateTime?: string;
     userId?: number;
+  };
+
+  type payUsingGETParams = {
+    /** alipayAccountNo */
+    alipayAccountNo?: string;
+  };
+
+  type queryPayResultFromAlipayUsingPOSTParams = {
+    /** alipayAccountNo */
+    alipayAccountNo?: string;
+  };
+
+  type tradeQueryUsingPOSTParams = {
+    /** alipayAccountNo */
+    alipayAccountNo?: string;
   };
 
   type User = {

@@ -164,3 +164,18 @@ export async function updateMyUserUsingPost(
     ...(options || {}),
   });
 }
+
+/** 更新用户信息 POST /api/user/update/user */
+export async function updateByProfileUserUsingPost(
+  body: API.UserUpdateRequest,
+  options?: { [key: string]: any },
+) {
+  return request<API.BaseResponseBoolean_>('/api/user/update/user', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
+    ...(options || {}),
+  });
+}

@@ -17,7 +17,7 @@ export const waitTime = async (time: number = 100) => {
 };
 
 // 定义列对应后端字段
-const columns: ProColumns<API.AlipayInfo>[] = [
+const columns: ProColumns<API.AlipayInfoVO>[] = [
     {
         title: '序号',
         dataIndex: 'id',
